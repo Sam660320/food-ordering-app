@@ -4,25 +4,34 @@ import React from 'react'
 
 const items = [
     {
-        image: require("../assets/kimbap.png"),
-        text: 'Japan',
+        image: require("../assets/fast-food-menu.png"),
+        text: 'Burger',
     },
     {
-        image: require("../assets/chinese.png"),
+        image: require("../assets/sushi2.png"),
+        text: 'Japanese',
+    },
+    {
+        image: require("../assets/pizza.png"),
+        text: 'Pizza',
+    },
+    {
+        image: require("../assets/dessert.png"),
+        text: 'Dessert',
+    },
+    {
+        image: require("../assets/Chinese2.png"),
         text: 'Chinese',
-    },
-    {
-        image: require("../assets/korean.png"),
-        text: 'Korean',
     },
     {
         image: require("../assets/pasta.png"),
         text: 'Italian',
     },
     {
-        image: require("../assets/sushi2.png"),
-        text: 'Dessert',
+        image: require("../assets/drinks.png"),
+        text: 'Alcohol',
     },
+    
 ];
 
 export default function Categories() {
