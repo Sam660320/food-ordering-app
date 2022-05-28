@@ -10,6 +10,7 @@ import BottomNav from './BottomNav'
 const YELP_API_KEY = ""
 
 export default function Home() {
+    
     const [restaurantData, setRestaurantData] = useState(localRestaurants);
     const [city, setCity] = useState('Melbourne')
 
