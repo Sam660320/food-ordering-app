@@ -9,9 +9,7 @@ import BottomNav from './BottomNav'
 
 const YELP_API_KEY = ""
 
-export default function Home() {
-
-    
+export default function Home({ navigation }) {
     const [restaurantData, setRestaurantData] = useState(localRestaurants);
     const [city, setCity] = useState('Melbourne')
 
@@ -51,17 +49,19 @@ export default function Home() {
                     padding: 15
                 }}
             >
-            <Header />
-            <SearchBar  cityHandler={setCity} />
+                <Header />
+                <SearchBar  cityHandler={setCity} />
             </View>
+
             <ScrollView showsVerticalScrollIndicator={false}>
                 <Categories />
-                <Restaurant restaurantData={restaurantData} />
+                <Restaurant restaurantData={restaurantData} navigation={navigation}/>
             </ScrollView>
+
             <Divider width={1} />
-              <BottomNav />
+
+            <BottomNav />
             
-        
         </SafeAreaView>
     )
 }
