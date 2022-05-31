@@ -4,6 +4,8 @@ import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplet
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 
+// const {REACT_APP_GOOGLE_PLACES_KEY} = process.env
+
 export default function SearchBar({cityHandler}) {
   return (
     <View style={{

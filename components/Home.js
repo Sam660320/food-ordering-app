@@ -7,8 +7,8 @@ import Restaurant, { localRestaurants } from './Restaurant'
 import { Divider } from 'react-native-elements'
 import BottomNav from './BottomNav'
 
-const YELP_API_KEY = ""
 
+const YELP_API_KEY = ""
 export default function Home({ navigation }) {
     const [restaurantData, setRestaurantData] = useState(localRestaurants);
     const [city, setCity] = useState('Melbourne')
@@ -63,5 +63,5 @@ export default function Home({ navigation }) {
             <BottomNav />
             
         </SafeAreaView>
-    )
+    );
 }

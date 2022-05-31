@@ -27,7 +27,7 @@ export default function RestaurantDetails({route, navigation}) {
             <MenuItem restaurantName={route.params.name}/>
         </ScrollView>
         <Divider width={1} />
-        <Cart navigation={navigation} restaurantName={route.params.name} />
+        <Cart navigation={navigation} />
     </View>
   )
 }

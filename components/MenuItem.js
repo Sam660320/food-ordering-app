@@ -2,7 +2,7 @@ import { View, Text, Image, ScrollView, SafeAreaView } from 'react-native'
 import React from 'react'
 import { Divider } from 'react-native-elements';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 const foods = [
     {
@@ -12,61 +12,61 @@ const foods = [
         image: "http://www.chinabargroup.com/wp-content/uploads/2016/06/restaurant_chinabar_01-hd-768x593.jpg"
     },
     {
-        title: "Burger",
+        title: "Pizza",
         description: "yAMMY",
         price: "$8.8",
         image: "http://www.chinabargroup.com/wp-content/uploads/2016/06/restaurant_chinabar_01-hd-768x593.jpg"
     },
     {
-        title: "Burger",
+        title: "Cheeseburger",
         description: "yAMMY",
         price: "$9.8",
         image: "http://www.chinabargroup.com/wp-content/uploads/2016/06/restaurant_chinabar_01-hd-768x593.jpg"
     },
     {
-        title: "Burger",
+        title: "meatLover",
         description: "yAMMY",
         price: "$19.8",
         image: "http://www.chinabargroup.com/wp-content/uploads/2016/06/restaurant_chinabar_01-hd-768x593.jpg"
     },
     {
-        title: "Burger",
+        title: "Icecream",
         description: "yAMMY",
         price: "$29.8",
         image: "http://www.chinabargroup.com/wp-content/uploads/2016/06/restaurant_chinabar_01-hd-768x593.jpg"
     },
     {
-        title: "Burger",
+        title: "Chocolate",
         description: "yAMMY",
         price: "$39.8",
         image: "http://www.chinabargroup.com/wp-content/uploads/2016/06/restaurant_chinabar_01-hd-768x593.jpg"
     },
     {
-        title: "Burger",
+        title: "Coffee",
         description: "yAMMY",
         price: "$7.8",
         image: "http://www.chinabargroup.com/wp-content/uploads/2016/06/restaurant_chinabar_01-hd-768x593.jpg"
     },
      {
-        title: "Burger",
+        title: "bubble Tea",
         description: "yAMMY",
         price: "$7.8",
         image: "http://www.chinabargroup.com/wp-content/uploads/2016/06/restaurant_chinabar_01-hd-768x593.jpg"
     },
     {
-        title: "Burger",
+        title: "Three guys",
         description: "yAMMY",
         price: "$7.8",
         image: "http://www.chinabargroup.com/wp-content/uploads/2016/06/restaurant_chinabar_01-hd-768x593.jpg"
     },
     {
-        title: "Burger",
+        title: "McSpicy",
         description: "yAMMY",
         price: "$7.8",
         image: "http://www.chinabargroup.com/wp-content/uploads/2016/06/restaurant_chinabar_01-hd-768x593.jpg"
     },
     {
-        title: "Burger",
+        title: "Donut",
         description: "yAMMY",
         price: "$7.8",
         image: "http://www.chinabargroup.com/wp-content/uploads/2016/06/restaurant_chinabar_01-hd-768x593.jpg"
@@ -80,8 +80,16 @@ export default function MenuItem({ restaurantName }) {
         dispatch({
             type: "ADD_TO_CART",
             payload: {...item, restaurantName: restaurantName, checkboxValue: checkboxValue}
-        })
-  return (
+        });
+
+    const cartItems = useSelector(
+        (state) => state.cartReducer.selectedItems.items
+    );
+
+    const isFoodInCart = (food, cartItems) =>
+        Boolean(cartItems.find((item) => item.title === food.title));
+
+    return (
     <SafeAreaView>
         <ScrollView showsVerticalScrollIndicator={false}>
             {foods.map((food, index) => (
@@ -95,6 +103,7 @@ export default function MenuItem({ restaurantName }) {
                         iconStyle={{borderColor: "lightgray", borderRadius: 7}}  
                         fillColor="green"
                         onPress={(checkboxValue)=>selectItem(food, checkboxValue)}
+                        isChecked={isFoodInCart(food, cartItems)}
                         />
                         <FoodInfo food={food} />
                         <FoodImage food={food} />
