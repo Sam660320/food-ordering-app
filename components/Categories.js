@@ -20,10 +20,6 @@ const items = [
         text: 'Dessert',
     },
     {
-        image: require("../assets/Chinese2.png"),
-        text: 'Chinese',
-    },
-    {
         image: require("../assets/pasta.png"),
         text: 'Italian',
     },

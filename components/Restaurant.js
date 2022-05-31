@@ -2,24 +2,7 @@ import { View, Text, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 
-export const localRestaurants = [
-    {
-        name: "China Bar",
-        image_url: "http://www.chinabargroup.com/wp-content/uploads/2016/06/restaurant_chinabar_01-hd-768x593.jpg",
-        categories: ["Chinese"],
-        price: "$$",
-        reviews: 970,
-        rating: 3.7,
-    },
-    {
-        name: "Grill'd",
-        image_url: "https://www.sharks.com.au/siteassets/2018/02/20180220_grilld_site4.jpg?center=0.3%2C0.5&preset=photo-inline",
-        categories: ["Burger", "Fast-food"],
-        price: "$$",
-        reviews: 450,
-        rating: 4.3,
-    }
-]
+
 
 export default function Restaurant({navigation, ...props}) {
   return (
@@ -104,3 +87,7 @@ const RestaurantInfo = (props) => {
         </View>
     )
 }
+
+export const localRestaurants = [
+    
+]

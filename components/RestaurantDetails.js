@@ -4,7 +4,7 @@ import RestaurantInfo from './RestaurantInfo'
 import { Divider } from 'react-native-elements'
 import MenuItem from './MenuItem'
 import Cart from './Cart'
-
+import BottomNav from './BottomNav'
 
 export default function RestaurantDetails({route, navigation}) {
   return (
@@ -26,6 +26,8 @@ export default function RestaurantDetails({route, navigation}) {
         <ScrollView showsVerticalScrollIndicator={false}>
             <MenuItem restaurantName={route.params.name}/>
         </ScrollView>
+        <Divider width={1} />
+        <View style={{paddingBottom: 30, backgroundColor: "#eee"}}><BottomNav /></View>
         <Divider width={1} />
         <Cart navigation={navigation} />
     </View>
