@@ -12,12 +12,6 @@ const foods = [
         image: "https://i0.wp.com/www.gastrosenses.com/wp-content/uploads/2020/12/Beef-Masala-Curry-4.jpg?w=1200&quality=100&strip=all&ssl=1"
     },
     {
-        title: "Lasagna",
-        description: "Tender pieces of pasta noodles layered with a hearty tomato sauce, creamy ricotta, and mozzarella cheese.",
-        price: "$12.8",
-        image: "https://www.jessicagavin.com/wp-content/uploads/2017/07/meat-lasagna-1200-450x450.jpg"
-    },
-    {
         title: "Tomato Spinach Chicken Pasta",
         description: "Tender pan-fried chicken nestled in a creamy tomato spinach sauce.",
         price: "$10.8",
@@ -54,6 +48,12 @@ const foods = [
         image: "https://assets.bonappetit.com/photos/5b919cb83d923e31d08fed17/1:1/w_2240,c_limit/basically-burger-1.jpg"
     },
     {
+        title: "Lasagna",
+        description: "Tender pieces of pasta noodles layered with a hearty tomato sauce, creamy ricotta, and mozzarella cheese.",
+        price: "$12.8",
+        image: "https://www.jessicagavin.com/wp-content/uploads/2017/07/meat-lasagna-1200-450x450.jpg"
+    },
+    {
         title: "Bubble Tea",
         description: "Bouncy, chewy balls are fun to munch on, much like chewing gum.",
         price: "$7.8",
@@ -85,7 +85,8 @@ export default function MenuItem({ restaurantName }) {
                     <View style={{
                         flexDirection: "row",
                         justifyContent: "space-between",
-                        margin: 20
+                        marginVertical: 15,
+                        marginHorizontal: 7
                     }}>
                         <BouncyCheckbox 
                             iconStyle={{borderColor: "lightgray", borderRadius: 7}}  
@@ -126,7 +127,8 @@ const FoodImage = (props) => (
         <Image source={{ uri:props.food.image}} style={{
             width: 100,
             height: 100,
-            borderRadius: 9
+            borderRadius: 9,
+            
 
         }} />
     </View>

@@ -3,7 +3,6 @@ import React from 'react'
 import { auth } from '../firebase'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import BottomNav from './BottomNav'
-import { Divider } from 'react-native-elements'
 
 const UserProfile = ({ navigation }) => {
     const handleSignOut = () => {
@@ -17,7 +16,7 @@ const UserProfile = ({ navigation }) => {
   return (
     <SafeAreaView >
         <View style={{justifyContent: "center", alignItems: "center"}}>
-            <Text style={styles.screen}>Welcome {auth.currentUser?.email}</Text>
+            <Text style={styles.screen}>Hi {auth.currentUser?.email}</Text>
         </View>
      
         <View>
@@ -85,22 +84,19 @@ export default UserProfile
 
 const styles = StyleSheet.create({
     screen: {
-        fontSize: 15,
-         fontWeight: "500",
-          color: "green",
-           marginBottom: 70,
-            marginTop: 30
+        fontSize: 20,
+        fontWeight: "500",
+        color: "green",
+        marginBottom: 70,
+        marginTop: 30
     },
     container: {
-
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
-        
-        
         borderColor: "green",
-      },
-      button: {
+    },
+    button: {
         flexDirection: "row",
         justifyContent: "space-between",
         width: '100%',
@@ -108,16 +104,15 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         alignItems: 'center',
         borderColor: "green"
-
-      },
-      buttonOutline: {
+    },
+    buttonOutline: {
         backgroundColor: 'white',
         borderColor: '#eee',
         borderWidth: 2,
-      },
-      subview: {
+    },
+    subview: {
         flexDirection: "row",
         justifyContent: "flex-start"
-      }
+    }
 })
 

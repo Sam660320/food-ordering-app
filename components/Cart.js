@@ -57,7 +57,7 @@ export default function Cart({navigation}) {
     
         restaurantName: {
           textAlign: "center",
-          fontWeight: "600",
+          fontWeight: "500",
           fontSize: 18,
           marginBottom: 10,
         },
@@ -70,9 +70,10 @@ export default function Cart({navigation}) {
     
         subtotalText: {
           textAlign: "left",
-          fontWeight: "600",
+          fontWeight: "700",
           fontSize: 15,
           marginBottom: 10,
+          marginHorizontal: 22,
         },
     });
 

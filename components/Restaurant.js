@@ -5,6 +5,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 
 
 export default function Restaurant({navigation, ...props}) {
+
   return (
         <View>
             {props.restaurantData.map((restaurant, index) => (
@@ -26,7 +27,8 @@ export default function Restaurant({navigation, ...props}) {
                         style={{
                             marginTop: 10, 
                             padding: 15, 
-                            backgroundColor: 'white'
+                            backgroundColor: '#F3FEF8',
+                            borderRadius: 15
                         }}
                     >
                         <RestaurantImage image={restaurant.image_url}/>
@@ -40,6 +42,7 @@ export default function Restaurant({navigation, ...props}) {
 }
 
 const RestaurantImage = (props) => {
+    
     return (
         <View>
             <Image 

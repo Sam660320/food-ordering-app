@@ -28,7 +28,7 @@ const BottomNav = () => {
                 </View>
             </TouchableOpacity>
             <TouchableOpacity onPress={() =>
-                            navigation.navigate("Cart")}>
+                            navigation.navigate("Home")}>
                 <View style={{ display: "block", alignItems: "center"}}>
                     <AntDesign name="shoppingcart" size={25} style={{ marginRight: 3, marginTop: 10}} />
                     <Text>Cart</Text>

@@ -9,6 +9,7 @@ import OrderCompleted from "./components/OrderCompleted";
 import Login from "./components/Login";
 import UserProfile from "./components/UserProfile";
 import Cart from "./components/Cart";
+import CheckoutScreen from "./components/CheckoutScreen";
 
 const store = configureStore();
 export default function RootNavigation() {
@@ -30,6 +31,8 @@ export default function RootNavigation() {
         <Stack.Screen name="Cart" component={Cart} />
 
         <Stack.Screen name="UserProfile" component={UserProfile} />
+        <Stack.Screen name="CheckoutScreen" component={CheckoutScreen} />
+
       </Stack.Navigator>
     </NavigationContainer>
   </ReduxProvider>

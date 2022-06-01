@@ -46,10 +46,10 @@ export default function OrderCompleted({navigation}) {
         }}
       >
         <LottieView
-          style={{ height: 100, alignSelf: "center", marginBottom: 30 }}
-          source={require("../assets/animations/check-mark.json")}
+          style={{ height: 150, alignSelf: "center", marginBottom: 30 }}
+          source={require("../assets/animations/check-success.json")}
           autoPlay
-          speed={0.5}
+          speed={1}
           loop={false}
         />
         <Text style={{ fontSize: 20, fontWeight: "bold" }}>
@@ -61,7 +61,8 @@ export default function OrderCompleted({navigation}) {
             style={{ height: 200, alignSelf: "center" }}
             source={require("../assets/animations/cooking1.json")}
             autoPlay
-            speed={0.5}
+            speed={0.7}
+            loop={false}
           />
             <View style={{ flexDirection: "row", justifyContent: "center", width: "100%" }}>
                     <TouchableOpacity 
