@@ -9,7 +9,7 @@ import BottomNav from './BottomNav'
 import { auth } from '../firebase'
 
 
-const YELP_API_KEY = "DUwUf7NAcmCGk318zZyzjFKP_pn2nLa6DT9lvIUu2n1DAQrl4y-8XurunKGwQQCKzHbQ8JY7jjdOFnVeyAxMvVF0els-IQVoNE99EZxbBrnEW0_oPYr2vdLQI8uOYnYx"
+const YELP_API_KEY = "x"
 export default function Home({ navigation }) {
     const [restaurantData, setRestaurantData] = useState(localRestaurants);
     const [city, setCity] = useState('Melbourne')
