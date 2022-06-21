@@ -13,6 +13,7 @@ const UserProfile = ({ navigation }) => {
           })
           .catch(error => alert(error.message))
     }
+
     
   return (
     <SafeAreaView >
