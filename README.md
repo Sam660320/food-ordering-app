@@ -1,5 +1,4 @@
-# Project 3 Food-ordering-app 
-
+# Project 3 / Food-ordering-app 
 
 
 ## 🚀 How to use
