@@ -14,8 +14,6 @@ export default function Home({ navigation }) {
     const [restaurantData, setRestaurantData] = useState(localRestaurants);
     const [city, setCity] = useState('Melbourne')
 
-    
-
     const getRestaurantsFromYelp =() => {
         const yelpUrl = `https://api.yelp.com/v3/businesses/search?term=restaurant&location=${city}`;
     
